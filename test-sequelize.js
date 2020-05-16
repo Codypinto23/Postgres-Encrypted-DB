@@ -1,4 +1,5 @@
 const  path = require('path')
+const uuid =require('uuidv4')
 
 require('dotenv').config({path: path.join(__dirname, '../src/.env')})
 
@@ -27,7 +28,8 @@ sequelize.sync().then(function () {
 // Insert data into the User's table
 const createUser = (name, data, userKey, serverKey) =>{
      console.log("name is",name)
-	User.create({
+	User.build({
+        id:uuid(),
         name:name,
         data:
             Sequelize.fn(
