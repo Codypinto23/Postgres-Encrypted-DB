@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "yarn clean && yarn run build && ENV_ENVIRONMENT=production node -r esm ./build/index.js",
-    "dev": "ENV_ENVIRONMENT=development nodemon --exec babel-node src/index.js",
+    "start": "yarn clean && yarn run build && ENV_ENVIRONMENT=production node -r esm ./build/test-sequelize.js",
+    "dev": "ENV_ENVIRONMENT=development nodemon --exec babel-node test-sequelize.js",
     "clean": "rm -rf build && mkdir build",
     "build": "babel -d ./build ./src -s"
   },
