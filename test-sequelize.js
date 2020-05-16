@@ -11,6 +11,7 @@ let sequelize = new Sequelize('test-encrypt', 'cody', 'test', {
 
 
 let User = sequelize.define("users", {
+        id: {type: Sequelize.UUID,unique:true, primaryKey: true},
         name: {type: Sequelize.STRING, primaryKey: true}  ,
         data: {type: Sequelize.TEXT}
     },
