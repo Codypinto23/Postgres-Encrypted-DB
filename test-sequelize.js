@@ -1,5 +1,5 @@
-const  path = require('path')
-const uuid =require('uuidv4')
+import  path from 'path';
+import {uuid} from 'uuidv4'
 
 require('dotenv').config({path: path.join(__dirname, '../src/.env')})
 
