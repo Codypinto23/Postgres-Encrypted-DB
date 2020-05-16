@@ -116,7 +116,7 @@ const migrateUserKey = (name, oldKey, newKey, serverKey) =>
 console.log("test finding user")
 async function lookupData(){
 
-    let foundUser= await findUser("marco","userKey","serverKey");
+    let foundUser= await findUser("marco2","userKey","serverKey");
     if (foundUser !==undefined && foundUser!=null) console.log("foundUser",foundUser.dataValues)
     if (!foundUser) {
         console.log("try adding new data")
