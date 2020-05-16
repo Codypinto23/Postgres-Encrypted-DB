@@ -74,6 +74,7 @@ const updateUser = (name, data, userKey, serverKey) =>
     User.findOne({
         where: {name}
     }).then(user => {
+        if (user)
         user.update({
             name:name,
             data:
@@ -118,7 +119,7 @@ async function lookupData(){
     let foundUser= await findUser("marco","userKey","serverKey");
     if (foundUser !==undefined && foundUser!=null) console.log("foundUser",foundUser.dataValues)
     console.log("try adding new data")
-    createUser("marco2","new data2","userKey","serverkey")
+    createUser("marco2","new data2","userKey","serverKey")
 	console.log("try updating data")
 updateUser("marco2","cool updated data","userKey","serverKey")
     //let foundUser2= await findUser("marco","userKey","serverkey");
