@@ -121,9 +121,11 @@ async function lookupData(){
     if (!foundUser) {
         console.log("try adding new data")
         createUser("marco2", "new data2", "userKey", "serverKey")
-        console.log("try updating data")
+
     }else {
+        console.log("try updating data")
      let userUpdate=await   updateUser("marco2", "cool updated data", "userKey", "serverKey")
+        console.log("try migrating data")
         let userMigrate=await migrateUserKey("marco2","userKey","coolKey","serverKey")
     }
     //let foundUser2= await findUser("marco","userKey","serverkey");
