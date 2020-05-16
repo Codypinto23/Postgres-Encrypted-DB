@@ -5,7 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn clean && yarn run build && ENV_ENVIRONMENT=production node -r esm ./build/index.js",
-    "dev": "ENV_ENVIRONMENT=development nodemon --exec babel-node src/index.js"
+    "dev": "ENV_ENVIRONMENT=development nodemon --exec babel-node src/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build": "babel -d ./build ./src -s"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
