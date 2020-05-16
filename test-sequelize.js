@@ -28,7 +28,7 @@ sequelize.sync().then(function () {
 // Insert data into the User's table
 const createUser = (name, data, userKey, serverKey) =>{
      console.log("name is",name)
-	User.build({
+	let user=User.build({
         id:uuid(),
         name:name,
         data:
@@ -41,7 +41,10 @@ const createUser = (name, data, userKey, serverKey) =>{
                 ), 'text'),
                 serverKey
             ),
-    })
+    });
+     user.save().then(record=>{
+         console.log("user created",record)
+     })
 }
 
 // Read out encrypted data:
