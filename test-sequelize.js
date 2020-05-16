@@ -119,10 +119,10 @@ async function lookupData(){
     if (foundUser !==undefined && foundUser!=null) console.log("foundUser",foundUser.dataValues)
     console.log("try adding new data")
     createUser("marco2","new data2","userKey","serverkey")
-/*	console.log("try updating data")
-updateUser("marco","cool new data","userKey","serverKey")
-    let foundUser2= await findUser("marco","userKey","serverkey");
-    console.log("foundUser",foundUser2)
-*/
+	console.log("try updating data")
+updateUser("marco2","cool updated data","userKey","serverKey")
+    //let foundUser2= await findUser("marco","userKey","serverkey");
+    //console.log("foundUser",foundUser2)
+
 }
 lookupData()
