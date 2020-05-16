@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "npx babel-node --presets @babel/preset-env test-sequelize.js"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "pg": "^8.2.1",
